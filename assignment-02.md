@@ -68,18 +68,29 @@ and push to your github repository.
   * Algorithm $\mathcal{A}$ solves problems by dividing them into
       five subproblems of half the size, recursively solving each
       subproblem, and then combining the solutions in linear time.
+
+    W(n) = 5W(n/2) + n
+    O(n^log_2 5)
     
   * Algorithm $\mathcal{B}$ solves problems of size $n$ by
       recursively solving two subproblems of size $n-1$ and then
       combining the solutions in constant time.
+
+    W(n) = 2W(n-1) + 1
+    O(2^n)
     
   * Algorithm $\mathcal{C}$ solves problems of size $n$ by dividing
       them into nine subproblems of size $n/3$, recursively solving
       each subproblem, and then combining the solutions in $O(n^2)$
       time.
 
+    W(n) = 9W(n/3) + n^2
+    O(n^2 log n)            
+
     What are the asymptotic running times of each of these algorithms?
     Which algorithm would you choose?
+
+    I'd choose algorithm C because n^2 log n is less than n^log_2 5, which means it'll run faster than algorithm A.
 
 
 3. Now that you have some practice solving recurrences, let's work on
